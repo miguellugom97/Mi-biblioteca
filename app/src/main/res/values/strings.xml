@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Mi Biblioteca</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mis_libros">Mis libros</string>
+    <string name="lbl_mibiblioteca">Mi biblioteca</string>
+    <string name="titulo">Título</string>
+    <string name="telefono">Teléfono</string>
+    <string name="correo_electronico">Correo electrónico</string>
+    <string name="guardar">Guardar</string>
+    <string name="autor">Autor</string>
+    <string name="editorial">Editorial</string>
+    <string name="anio">Año</string>
+    <string name="msg_updated_book">El libro ha sido actualizado</string>
+    <string name="msg_save_book">El libro ha sido guardado</string>
+    <string name="msg_alert">Alerta</string>
+    <string name="msg_alert_delete_book">¿Estás seguro que deseas borrar el libro?</string>
+    <string name="msg_alert_true">Si</string>
+    <string name="msg_alert_false">No</string>
+</resources>
