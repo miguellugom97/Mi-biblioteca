@@ -15,5 +15,7 @@ data class Book(
     val author: String,
     val editorial: String,
     val year: String,
+    val price: String,
+    val category: String,
     val image: Bitmap
 ): Parcelable

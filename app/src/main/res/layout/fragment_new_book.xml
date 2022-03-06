@@ -7,11 +7,11 @@
     tools:context=".ui.view.newbook.NewBookFragment">
 
     <ImageView
-        android:id="@+id/iv_book"
+        android:id="@+id/iv_book_image"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:src="@drawable/ic_gallery"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/et_title"
+        android:id="@+id/et_title_book"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -30,10 +30,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_book" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_book_image" />
 
     <EditText
-        android:id="@+id/et_author"
+        android:id="@+id/et_author_book"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -44,10 +44,10 @@
         android:hint="@string/autor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_title" />
+        app:layout_constraintTop_toBottomOf="@+id/et_title_book" />
 
     <EditText
-        android:id="@+id/et_editorial"
+        android:id="@+id/et_editorial_book"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -58,10 +58,10 @@
         android:hint="@string/editorial"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_author" />
+        app:layout_constraintTop_toBottomOf="@+id/et_author_book" />
 
     <EditText
-        android:id="@+id/et_year"
+        android:id="@+id/et_year_book"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -72,18 +72,47 @@
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_editorial" />
+        app:layout_constraintTop_toBottomOf="@+id/et_editorial_book" />
+
+    <EditText
+        android:id="@+id/et_price_book"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/precio"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_year_book" />
+
+    <EditText
+        android:id="@+id/et_category_book"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:ems="10"
+        android:hint="@string/categoria"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_price_book" />
 
     <Button
         android:id="@+id/btn_save_contact"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/guardar"
-        app:layout_constraintEnd_toEndOf="@+id/et_editorial"
-        app:layout_constraintStart_toStartOf="@+id/et_editorial"
-        app:layout_constraintTop_toBottomOf="@+id/et_year" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_editorial_book"
+        app:layout_constraintStart_toStartOf="@+id/et_editorial_book"
+        app:layout_constraintTop_toBottomOf="@+id/et_category_book" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,11 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.SearchView
 import androidx.core.view.isVisible
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
-import androidx.navigation.NavGraph
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.miguellugo.mibiblioteca.R
@@ -20,7 +18,6 @@ import com.miguellugo.mibiblioteca.ui.view.adapters.ListBookAdapter
 import com.miguellugo.mibiblioteca.ui.viewmodel.BookViewModel
 import com.miguellugo.mibiblioteca.ui.viewmodel.SharedViewModel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.scopes.FragmentScoped
 
 @AndroidEntryPoint
 class HomeFragment : Fragment(), ListBookAdapter.OnItemClickListener, android.widget.SearchView.OnQueryTextListener {
