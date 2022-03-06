@@ -37,12 +37,13 @@ class NewBookFragment : Fragment() {
             val uriContent = result.uriContent
             val uriFilePath = result.getUriFilePath(requireContext()) // optional usage
             image = MediaStore.Images.Media.getBitmap(requireActivity().contentResolver, uriContent)
-            binding.ivBook.load(image)
+            binding.ivBookImage.load(image)
         } else {
             // an error occurred
             val exception = result.error
         }
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -66,7 +67,7 @@ class NewBookFragment : Fragment() {
                 }
             }
         }
-        binding.ivBook.setOnClickListener {
+        binding.ivBookImage.setOnClickListener {
             cropImage.launch(
                 options {
                     setGuidelines(CropImageView.Guidelines.ON)
@@ -82,26 +83,46 @@ class NewBookFragment : Fragment() {
         image = book.image
         bookId = book.id
         binding.apply {
-            etTitle.setText(book.title)
-            etAuthor.setText(book.author)
-            etEditorial.setText(book.editorial)
-            etYear.setText(book.year)
-            ivBook.load(book.image)
+            etTitleBook.setText(book.title)
+            etAuthorBook.setText(book.author)
+            etEditorialBook.setText(book.editorial)
+            etYearBook.setText(book.year)
+            etPriceBook.setText(book.price)
+            etCategoryBook.setText(book.category)
+            ivBookImage.load(book.image)
         }
     }
 
     private fun createBook() {
-        val title = binding.etTitle.text.toString()
-        val author = binding.etAuthor.text.toString()
-        val editorial = binding.etEditorial.text.toString()
-        val year = binding.etYear.text.toString()
+        val title = binding.etTitleBook.text.toString()
+        val author = binding.etAuthorBook.text.toString()
+        val editorial = binding.etEditorialBook.text.toString()
+        val year = binding.etYearBook.text.toString()
+        val price = binding.etPriceBook.text.toString()
+        val category = binding.etCategoryBook.text.toString()
 
-        if (isNewBook){
-            val book = Book(title = title, author = author, editorial = editorial, year = year, image = image!!)
+        if (isNewBook) {
+            val book = Book(
+                title = title,
+                author = author,
+                editorial = editorial,
+                year = year,
+                price = price,
+                category = category,
+                image = image!!
+            )
             saveBook(book)
-        }
-        else {
-            val book = Book(id = bookId, title = title, author = author, editorial = editorial, year = year, image = image!!)
+        } else {
+            val book = Book(
+                id = bookId,
+                title = title,
+                author = author,
+                editorial = editorial,
+                year = year,
+                price = price,
+                category = category,
+                image = image!!
+            )
             updateBook(book)
         }
     }

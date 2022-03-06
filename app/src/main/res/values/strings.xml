@@ -17,4 +17,6 @@
     <string name="msg_alert_delete_book">¿Estás seguro que deseas borrar el libro?</string>
     <string name="msg_alert_true">Si</string>
     <string name="msg_alert_false">No</string>
+    <string name="categoria">Categoría</string>
+    <string name="precio">Precio</string>
 </resources>
